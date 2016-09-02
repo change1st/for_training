@@ -1,4 +1,4 @@
-﻿# maven ignore
+# maven ignore
 target/
 
 # eclipse ignore
@@ -30,6 +30,7 @@ Thumbs.db
 # *.tar
 # *.tar.gz
 
-#maven project 
+#maven project
 catalina.base_IS_UNDEFINED/
 *.orig
+将删除 src/test/java/com/qunar/flightqm/refund/service/promotion/
