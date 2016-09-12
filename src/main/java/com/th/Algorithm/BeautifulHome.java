@@ -1,4 +1,4 @@
-package Algorithm;
+package com.th.Algorithm;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;

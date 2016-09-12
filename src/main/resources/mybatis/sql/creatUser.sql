@@ -1,0 +1,12 @@
+SET NAMES utf8mb4;
+use mybatis_test;
+
+CREATE TABLE `users` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `user_name` VARCHAR(10) NOT NULL DEFAULT '' COMMENT '用户名',
+  `age` INT NOT NULL DEFAULT 0 COMMENT '年龄',
+  `sex` VARCHAR(1) NOT NULL DEFAULT 'm' COMMENT '性别',
+  `remark` VARCHAR(50) NOT NULL DEFAULT '' COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+

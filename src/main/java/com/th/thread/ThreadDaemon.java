@@ -1,4 +1,4 @@
-package thread;
+package com.th.thread;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

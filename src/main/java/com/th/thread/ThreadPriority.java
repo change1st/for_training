@@ -1,4 +1,4 @@
-package thread;
+package com.th.thread;
 
 import com.google.common.collect.Lists;
 

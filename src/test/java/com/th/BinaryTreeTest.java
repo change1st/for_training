@@ -1,3 +1,6 @@
+package com.th;
+
+import com.th.BinaryTree;
 import org.junit.Test;
 
 /**

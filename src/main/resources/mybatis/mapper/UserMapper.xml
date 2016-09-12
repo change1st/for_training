@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.th.mybatisTest.dao.UserMapper">
+
+    <select id="getAllUser" resultType="com.th.mybatisTest.po.User">
+        SELECT id, user_name AS userName, age, sex, remark FROM users
+    </select>
+
+    <select id="getUserFromId" resultType="com.th.mybatisTest.po.User">
+        select id, user_name AS userName, age, sex, remark from users where id=#{id}
+    </select>
+
+    <select id="getUserFromName" resultType="com.th.mybatisTest.po.User">
+        SELECT id, user_name AS userName, age, sex, remark FROM users WHERE user_name=#{userName}
+    </select>
+
+    <update id="updateUserFromName" parameterType="java.lang.String">
+        UPDATE users SET remark=#{remark} where user_name=#{userName}
+    </update>
+
+    <delete id="deleteUser" parameterType="java.lang.String">
+        DELETE FROM users where user_name=#{userName}
+    </delete>
+
+    <insert id="insertUser" parameterType="com.th.mybatisTest.po.User">
+        INSERT INTO users
+        (
+          user_name,
+          age,
+          sex,
+          remark
+        ) VALUE (
+          #{userName},
+          #{age},
+          #{sex},
+          #{remark}
+        )
+    </insert>
+</mapper>
