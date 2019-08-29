@@ -1,9 +1,12 @@
 package com.th.designPattern.prototype;
 
+import com.th.designPattern.CNFException;
+
 import java.io.*;
 
 /**
  * Created by tianhui on 16/9/7.
+ * 原型模式
  */
 public class Prototype implements Cloneable, Serializable {
 
@@ -13,9 +16,13 @@ public class Prototype implements Cloneable, Serializable {
 
     private SerializableObject obj;
 
-    public Object clone() throws CloneNotSupportedException {
-        Prototype prototype = (Prototype) super.clone();
-        return prototype;
+    public Object clone() throws CNFException{
+        try {
+            Prototype prototype = (Prototype) super.clone();
+            return prototype;
+        } catch (CloneNotSupportedException e) {
+            throw new CNFException();
+        }
     }
 
     public Object deepClone() throws IOException, ClassNotFoundException {

@@ -59,4 +59,15 @@ public class User {
         this.sex = sex;
         this.remark = remark;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", age=" + age +
+                ", sex='" + sex + '\'' +
+                ", remark='" + remark + '\'' +
+                '}';
+    }
 }
