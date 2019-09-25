@@ -4,6 +4,12 @@ import java.util.List;
 
 public class NodeTraining {
 
+    /**
+     * 将链表每k个进行反转
+     * @param head
+     * @param k
+     * @return
+     */
     public static Node reverseSegment(Node head, int k) {
         if (k < 1) {
             return head;
@@ -20,9 +26,9 @@ public class NodeTraining {
         }
 
         int notReverseCount = length % k;
-        boolean reverse = !(notReverseCount > 0);
+        boolean reverse = notReverseCount == 0;
         Node tail = head;
-        Node newHead = notReverseCount > 0 ? head : null;
+        Node newHead = !reverse ? head : null;
         int count = 0;
         temp = head;
         while (temp != null) {
